@@ -1,0 +1,41 @@
+{
+  "id": "./",
+  "name": "Dashboard UBK SMadJiwa",
+  "short_name": "Dashboard UBK",
+  "description": "Akses pantas Dashboard Unit Bimbingan dan Kaunseling SMadJiwa.",
+  "lang": "ms-MY",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#452078",
+  "theme_color": "#452078",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
