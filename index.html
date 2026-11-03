@@ -227,201 +227,172 @@ body{min-width:320px}
   .module-card:hover,.profile-score-card:hover{transform:none;box-shadow:inherit}
 }
 
-
-/* ==========================================================
-   UBK MOBILE APP THEME - MAROON / PURPLE
-   Mobile-first presentation overrides. Original module logic
-   and GAS calls are intentionally preserved.
-   ========================================================== */
-:root{
- --navy:#58152f;--blue:#7c3aed;--sky:#f7eff6;--card:#fff;
- --muted:#766477;--border:#eadce8;--shadow:0 10px 28px rgba(83,20,57,.09);
- --ubk-maroon:#681b3b;--ubk-purple:#7138a8;--ubk-deep:#35112f;
-}
-html,body{background:#faf7fb!important;color:#2f1831}
-body{background:linear-gradient(160deg,#fbf7fb 0%,#f4eff9 55%,#fbf7fa 100%)!important}
-.brand-title{color:#54152f!important}
-.brand-sub{color:#8d6689!important}
-.app-header{
- background:rgba(255,251,254,.96)!important;border-bottom:1px solid #eadce8!important;
- box-shadow:0 5px 20px rgba(75,20,55,.07)!important
-}
-.hamburger{color:#681b3b!important;border-color:#eadce8!important}
-.app-sidebar{background:rgba(255,251,254,.99)!important;border-color:#eadce8!important}
-.tab-btn.active{background:linear-gradient(110deg,#681b3b,#7138a8)!important;color:#fff!important}
-.tab-btn:hover:not(.active){background:#f6edf6!important}
-.home-hero{
- background:linear-gradient(125deg,#fff7fb 0%,#f5eafa 48%,#eee5fa 100%)!important;
- border-color:#ead8e9!important;box-shadow:var(--shadow)!important
-}
-.home-hero:after{background:rgba(125,65,163,.13)!important}
-.home-hero .text-blue-700,.home-hero .text-blue-600{color:#7138a8!important}
-.module-card{border-color:#eadce8!important;box-shadow:0 8px 22px rgba(83,20,57,.07)!important}
-.module-card:hover{border-color:#c9a5ce!important;box-shadow:0 14px 30px rgba(113,56,168,.15)!important}
-.module-card h3{color:#54152f!important}
-.search-box,.header-pill{border-color:#eadce8!important}
-.home-note{background:linear-gradient(110deg,#f8eaf1,#f0e8fa)!important;border-color:#ead8ed!important;color:#681b3b!important}
-.auth-screen{background:radial-gradient(circle at 15% 15%,#f2dce9 0%,transparent 36%),linear-gradient(135deg,#fbf5fa,#eee5f7 65%,#f9f5fa)!important}
-.auth-card{border-color:#ead8e9!important;box-shadow:0 24px 70px rgba(83,20,57,.16)!important}
-.auth-input:focus{border-color:#8b3e83!important;box-shadow:0 0 0 3px rgba(113,56,168,.12)!important}
-.auth-btn{background:linear-gradient(110deg,#681b3b,#7138a8)!important}
-.auth-btn:hover{background:linear-gradient(110deg,#53142f,#5c278f)!important}
-.info-card{border-left-color:#7138a8!important;background:#f7eff8!important}
-.profile-kicker{color:#7138a8!important}
-.profile-category-icon,.profile-guardian-avatar{background:#f2e8f4!important;color:#7138a8!important}
-.profile-category-title{color:#54152f!important}
-.profile-academic-table th{background:#54152f!important}
-.profile-academic-table .exam-col{background:#681b3b!important}
-#main-content .text-green-900{color:#54152f!important}
-#main-content .text-green-800{color:#681b3b!important}
-#main-content .bg-green-900{background-color:#54152f!important}
-#main-content .bg-green-800{background-color:#681b3b!important}
-#main-content .bg-green-700{background-color:#7138a8!important}
-#main-content .border-green-800{border-color:#7138a8!important}
-#main-content .text-blue-700{color:#7138a8!important}
-#main-content .bg-blue-700{background-color:#7138a8!important}
-#main-content .bg-blue-50{background-color:#f5edf8!important}
-#main-content .border-blue-200{border-color:#e5d2eb!important}
-.footer-modern{background:#fffafd!important;border-color:#eadce8!important;color:#806d80!important}
-
-/* Mobile bottom navigation */
-.mobile-app-nav{display:none}
-.mobile-app-nav button{min-width:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
- color:#816d82;font-size:9px;font-weight:700;padding:7px 2px;border-radius:12px;transition:.18s}
-.mobile-app-nav button svg{width:19px;height:19px}
-.mobile-app-nav button.active{color:#fff;background:linear-gradient(135deg,#681b3b,#7138a8);box-shadow:0 4px 12px rgba(104,27,59,.2)}
-.mobile-app-nav button:active{transform:scale(.96)}
-.mobile-app-nav .nav-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-@media(max-width:900px){
- .app-header{height:64px!important;min-height:64px!important;padding-left:12px!important;padding-right:12px!important}
- .app-sidebar{top:64px!important;width:min(310px,88vw)!important}
- .sidebar-backdrop{inset:64px 0 0 0!important}
- .main-shell{padding:11px 10px 92px!important;min-height:calc(100dvh - 64px)!important}
- .home-hero{padding:17px!important;border-radius:20px!important;margin-bottom:14px!important}
- .home-hero h2{font-size:clamp(27px,7vw,38px)!important}
- .module-card{min-height:154px!important;padding:12px 8px!important;border-radius:16px!important}
- .module-icon{width:58px!important;height:58px!important;margin-bottom:9px!important}
- .module-icon svg{width:29px!important;height:29px!important}
- #module-grid{gap:9px!important}
- #extra-module-grid{gap:7px!important}
- .mobile-app-nav{
-   display:flex;position:fixed;z-index:90;left:9px;right:9px;bottom:max(8px,env(safe-area-inset-bottom));
-   min-height:62px;padding:5px 6px;background:rgba(255,251,254,.96);
-   border:1px solid #eadce8;border-radius:19px;box-shadow:0 9px 30px rgba(63,20,52,.17);
-   backdrop-filter:blur(18px)
- }
- #dashboard-shell{padding-bottom:0}
- .footer-modern{padding-bottom:78px!important}
- .profile-shell{border-radius:17px!important}
- .profile-hero{border-radius:17px!important}
- #main-content .overflow-x-auto{-webkit-overflow-scrolling:touch}
- #main-content select,#main-content input,#main-content button{touch-action:manipulation}
-}
-@media(max-width:640px){
- .brand-title{font-size:11px!important;max-width:58vw;white-space:normal!important}
- .hamburger{width:40px!important;height:40px!important;border-radius:12px!important}
- .app-header img{width:38px!important;height:38px!important}
- .main-shell{padding-left:8px!important;padding-right:8px!important}
- .home-hero{padding:14px!important}
- .home-hero .tracking-\\[\\.22em\\]{letter-spacing:.1em!important}
- .module-card{min-height:145px!important}
- .module-card h3{font-size:12px!important}
- .module-card p{font-size:10px!important}
- .mobile-app-nav{left:6px;right:6px;border-radius:16px}
- .mobile-app-nav button{font-size:8px}
- .mobile-app-nav button svg{width:18px;height:18px}
- #main-content .rounded-3xl{border-radius:17px}
- #main-content .p-6{padding:13px}
- #main-content .p-5{padding:12px}
- #main-content .p-4{padding:11px}
- #main-content table{font-size:10px}
- #main-content th,#main-content td{white-space:nowrap}
-}
-@media(max-width:360px){
- .mobile-app-nav button{font-size:7px}
- .mobile-app-nav button svg{width:17px;height:17px}
- .brand-title{font-size:10px!important}
-}
-/* ===== LOGIN FORM POLISH: FIX INPUT WIDTH + MOBILE SPACING ===== */
-#auth-screen .auth-card{box-sizing:border-box;width:min(430px,100%);max-width:100%;overflow:hidden}
-#auth-screen #login-form{display:flex;flex-direction:column;gap:15px;width:100%;min-width:0}
-#auth-screen #login-form>div{display:flex;flex-direction:column;gap:6px;width:100%;min-width:0;margin:0}
-#auth-screen #login-form label{display:block;margin:0 0 2px!important;color:#54203f;font-size:11px;font-weight:700;letter-spacing:.08em}
-#auth-screen .auth-input{
-  display:block;box-sizing:border-box;width:100%;max-width:100%;min-width:0;height:50px;
-  margin:0;padding:0 15px;border:1.5px solid #e3d5e8;border-radius:14px;
-  background:#fff;color:#351b36;font-family:'Poppins',sans-serif;font-size:14px;line-height:normal;
-  box-shadow:0 2px 7px rgba(74,25,67,.035);outline:none;appearance:none;-webkit-appearance:none;
-}
-#auth-screen .auth-input::placeholder{color:#9b8da0;opacity:1}
-#auth-screen .auth-input:focus{border-color:#873d86;box-shadow:0 0 0 3px rgba(113,56,168,.13),0 3px 10px rgba(83,20,57,.06);background:#fff}
-#auth-screen #login-error{box-sizing:border-box;width:100%;margin:0;padding:10px 12px;border-radius:12px}
-#auth-screen #login-error:empty{display:none!important}
-#auth-screen #login-error.hidden{display:none!important}
-#auth-screen .auth-btn{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin:0;border-radius:14px;font-size:13px;letter-spacing:.02em}
-#auth-screen .auth-card>p{line-height:1.6}
-@media(max-width:640px){
-  #auth-screen{padding:16px;}
-  #auth-screen .auth-card{padding:25px 20px;border-radius:22px}
-  #auth-screen #login-form{gap:13px}
-  #auth-screen .auth-input{height:49px;font-size:14px;padding:0 14px}
-}
-
-@media(prefers-reduced-motion:reduce){
- *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
-}
-
 </style>
-  </head>
+  
+<!-- UBK_GITHUB_GAS_RPC_BRIDGE -->
 <script>
-/* GitHub Pages <-> Google Apps Script bridge.
-   Set GAS_BRIDGE_URL in this file to the deployed /exec URL. */
-const GAS_BRIDGE_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpumppLziJaYc5_qreSOE9eU6Pdjchrditmef2R6ACihXGqfwfa-w-N/exec';
-(function(){
-  const pending = new Map();
-  let nextId = 1;
-  let ready = false;
-  const queue = [];
-  const frame = document.createElement('iframe');
-  frame.id = 'gas-api-bridge';
-  frame.setAttribute('aria-hidden','true');
-  frame.style.cssText = 'position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-10px;bottom:-10px;border:0';
-  if (GAS_BRIDGE_URL && !GAS_BRIDGE_URL.includes('PASTE_YOUR')) {
-    frame.src = GAS_BRIDGE_URL + (GAS_BRIDGE_URL.includes('?') ? '&' : '?') + 'bridge=1';
-  }
-  document.addEventListener('DOMContentLoaded',()=>document.body.appendChild(frame));
-  function send(item){
-    if(!frame.contentWindow || !ready){queue.push(item);return;}
-    frame.contentWindow.postMessage({type:'UBK_CALL',id:item.id,method:item.method,args:item.args}, '*');
-    pending.set(item.id,item);
-    setTimeout(()=>{if(pending.has(item.id)){pending.delete(item.id);item.failure({message:'Sambungan backend mengambil masa terlalu lama. Semak URL GAS dan deployment.'});}},45000);
-  }
-  window.addEventListener('message',event=>{
-    if(event.source!==frame.contentWindow || !event.data) return;
-    const d=event.data;
-    if(d.type==='UBK_READY'){ready=true;while(queue.length)send(queue.shift());return;}
-    if(d.type!=='UBK_RESULT')return;
-    const item=pending.get(d.id);if(!item)return;pending.delete(d.id);
-    if(d.ok)item.success(d.result);else item.failure({message:d.error||'Ralat backend Google Apps Script.'});
-  });
-  const runner={
-    _success:()=>{},_failure:()=>{},
-    withSuccessHandler(fn){this._success=typeof fn==='function'?fn:()=>{};return this;},
-    withFailureHandler(fn){this._failure=typeof fn==='function'?fn:()=>{};return this;}
-  };
-  const proxy=new Proxy(runner,{get(target,prop){
-    if(prop in target)return target[prop];
-    if(typeof prop!=='string')return undefined;
-    return (...args)=>{
-      const item={id:nextId++,method:prop,args,success:target._success,failure:target._failure};
-      target._success=()=>{};target._failure=()=>{};send(item);return undefined;
+(function () {
+  'use strict';
+
+  // If this page is opened inside Apps Script itself, retain native google.script.run.
+  if (window.google && window.google.script && window.google.script.run) return;
+
+  var GAS_EXEC_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpumppLziJaYc5_qreSOE9eU6Pdjchrditmef2R6ACihXGqfwfa-w-N/exec';
+  var BRIDGE_URL = GAS_EXEC_URL + '?bridge=1';
+  var bridgeFrame = null;
+  var bridgeReady = false;
+  var nextId = 1;
+  var pending = Object.create(null);
+  var waiting = [];
+
+  function ensureBridge() {
+    if (bridgeFrame) return;
+    bridgeFrame = document.createElement('iframe');
+    bridgeFrame.title = 'UBK secure data connection';
+    bridgeFrame.setAttribute('aria-hidden', 'true');
+    bridgeFrame.tabIndex = -1;
+    bridgeFrame.style.cssText = 'position:absolute;width:1px;height:1px;border:0;left:-9999px;top:-9999px;opacity:0;pointer-events:none;';
+    bridgeFrame.onload = function () {
+      bridgeReady = true;
+      flushQueue();
     };
-  }});
-  window.google=window.google||{};
-  window.google.script={run:proxy};
-  window.ubkBridgeStatus=()=>({configured:!GAS_BRIDGE_URL.includes('PASTE_YOUR'),ready});
+    bridgeFrame.onerror = function () {
+      failAll('Tidak dapat memuatkan sambungan Google Apps Script. Semak URL deployment dan akses Web App.');
+    };
+    bridgeFrame.src = BRIDGE_URL;
+    (document.body || document.documentElement).appendChild(bridgeFrame);
+  }
+
+  function failAll(message) {
+    var ids = Object.keys(pending);
+    ids.forEach(function (id) {
+      var item = pending[id];
+      delete pending[id];
+      if (item && typeof item.failure === 'function') item.failure({ message: message });
+    });
+    waiting = [];
+  }
+
+  function sendCall(item) {
+    if (!bridgeFrame || !bridgeFrame.contentWindow || !bridgeReady) {
+      waiting.push(item);
+      ensureBridge();
+      return;
+    }
+    pending[item.id] = item;
+    try {
+      bridgeFrame.contentWindow.postMessage({
+        type: 'UBK_RPC_CALL',
+        id: item.id,
+        method: item.method,
+        args: item.args
+      }, '*');
+    } catch (error) {
+      delete pending[item.id];
+      if (typeof item.failure === 'function') item.failure({ message: error.message || String(error) });
+    }
+  }
+
+  function flushQueue() {
+    if (!bridgeReady || !bridgeFrame || !bridgeFrame.contentWindow) return;
+    var batch = waiting.slice();
+    waiting = [];
+    batch.forEach(function (item) { sendCall(item); });
+  }
+
+  window.addEventListener('message', function (event) {
+    if (!bridgeFrame || event.source !== bridgeFrame.contentWindow) return;
+    var data = event.data || {};
+
+    if (data.type === 'UBK_BRIDGE_READY') {
+      bridgeReady = true;
+      flushQueue();
+      return;
+    }
+
+    if (data.type !== 'UBK_RPC_RESULT' || !data.id) return;
+    var item = pending[data.id];
+    if (!item) return;
+    delete pending[data.id];
+
+    if (data.ok) {
+      if (typeof item.success === 'function') item.success(data.result);
+    } else {
+      if (typeof item.failure === 'function') item.failure({ message: data.error || 'Ralat daripada Google Apps Script.' });
+    }
+  });
+
+  function makeRunner(success, failure) {
+    var runner = {};
+    runner.withSuccessHandler = function (fn) { return makeRunner(fn, failure); };
+    runner.withFailureHandler = function (fn) { return makeRunner(success, fn); };
+    runner.withUserObject = function () { return runner; };
+
+    return new Proxy(runner, {
+      get: function (target, property) {
+        if (property in target) return target[property];
+        if (typeof property !== 'string' || property.charAt(0) === '_') return undefined;
+
+        return function () {
+          var args = Array.prototype.slice.call(arguments);
+          var id = 'ubk_' + (nextId++);
+          var item = {
+            id: id,
+            method: property,
+            args: args,
+            success: success,
+            failure: failure
+          };
+
+          // Avoid leaving the login button spinning forever if the bridge is unavailable.
+          item.timer = setTimeout(function () {
+            if (pending[id]) {
+              delete pending[id];
+              if (typeof failure === 'function') {
+                failure({ message: 'Sambungan ke server mengambil masa terlalu lama. Sila cuba semula.' });
+              }
+            } else {
+              var index = waiting.indexOf(item);
+              if (index !== -1) {
+                waiting.splice(index, 1);
+                if (typeof failure === 'function') {
+                  failure({ message: 'Sambungan ke server mengambil masa terlalu lama. Sila cuba semula.' });
+                }
+              }
+            }
+          }, 45000);
+
+          var originalSuccess = item.success;
+          var originalFailure = item.failure;
+          item.success = function (result) {
+            clearTimeout(item.timer);
+            if (typeof originalSuccess === 'function') originalSuccess(result);
+          };
+          item.failure = function (error) {
+            clearTimeout(item.timer);
+            if (typeof originalFailure === 'function') originalFailure(error);
+          };
+
+          sendCall(item);
+        };
+      }
+    });
+  }
+
+  window.google = window.google || {};
+  window.google.script = window.google.script || {};
+  window.google.script.run = makeRunner(null, null);
+
+  // Start bridge load immediately rather than waiting for the first login click.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureBridge, { once: true });
+  } else {
+    ensureBridge();
+  }
 })();
 </script>
+
+</head>
  <body data-template-id="__page-root" class="min-h-screen bg-white flex flex-col" style="background: rgb(255, 255, 255);">
 
   <div id="auth-screen" class="auth-screen">
@@ -506,14 +477,6 @@ const GAS_BRIDGE_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpum
   <footer data-template-id="footer-section" class="footer-modern text-center py-3 text-xs">
    <p>© 2026 SM Sains Sultan Mohamad Jiwa · Dashboard UBK · Unit Bimbingan dan Kaunseling</p>
   </footer>
-   <nav class="mobile-app-nav" id="mobile-app-nav" aria-label="Navigasi pantas">
-     <button type="button" data-nav-tab="UTAMA" onclick="switchTab('UTAMA')"><i data-lucide="house"></i><span class="nav-label">Utama</span></button>
-     <button type="button" data-nav-tab="RINGKASAN" onclick="switchTab('RINGKASAN')"><i data-lucide="layout-dashboard"></i><span class="nav-label">Ringkasan</span></button>
-     <button type="button" data-nav-tab="PROFIL MURID" onclick="switchTab('PROFIL MURID')"><i data-lucide="contact-round"></i><span class="nav-label">Profil</span></button>
-     <button type="button" data-nav-tab="AKADEMIK" onclick="switchTab('AKADEMIK')"><i data-lucide="graduation-cap"></i><span class="nav-label">Akademik</span></button>
-     <button type="button" data-nav-tab="MENTOR" onclick="switchTab('MENTOR')"><i data-lucide="users"></i><span class="nav-label">Mentor</span></button>
-     <button type="button" data-nav-tab="MENU" onclick="toggleSidebar()"><i data-lucide="menu"></i><span class="nav-label">Menu</span></button>
-   </nav>
   <div id="student-modal" class="modal-overlay hidden" onclick="if(event.target===this)this.classList.add('hidden')">
    <div class="modal-content">
     <div class="flex justify-between items-center mb-4">
@@ -649,7 +612,6 @@ const GAS_BRIDGE_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpum
         const name=document.getElementById('header-username');
         if(name)name.textContent=user.username||'-';
         renderUtama(document.getElementById('main-content'));
-        updateMobileNav('UTAMA');
         buildSidebar();
         loadIconsAfterUI();
     }
@@ -1017,16 +979,6 @@ const GAS_BRIDGE_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpum
         safeIcons();
     }
 
-
-    function updateMobileNav(tab){
-        const nav=document.getElementById('mobile-app-nav');
-        if(!nav) return;
-        nav.querySelectorAll('button[data-nav-tab]').forEach(function(btn){
-            const key=btn.getAttribute('data-nav-tab');
-            btn.classList.toggle('active', key===tab);
-        });
-    }
-
     function switchTab(tab) {
         if(tab === 'SETTING'){
             openAdminSettings();
@@ -1034,7 +986,6 @@ const GAS_BRIDGE_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpum
         }
         if(tab !== 'UTAMA' && !hasModuleAccess(tab)) { showAccessDenied(tab); return; }
         currentTab = tab;
-        updateMobileNav(tab);
         if(tab === 'UTAMA'){
             closeSidebar();
             renderUtama(document.getElementById('main-content'));
@@ -1047,7 +998,6 @@ const GAS_BRIDGE_URL = 'https://script.google.com/macros/s/AKfycbxlrISukL-ghbpum
 
     function renderUtama(main){
         currentTab='UTAMA';
-        updateMobileNav('UTAMA');
         Object.keys(charts).forEach(k=>{ if(charts[k]){charts[k].destroy();delete charts[k];} });
         main.innerHTML = `
           <div class="page-wrap">
